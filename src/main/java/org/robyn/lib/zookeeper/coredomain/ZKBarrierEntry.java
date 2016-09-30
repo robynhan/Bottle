@@ -12,7 +12,7 @@ public class ZKBarrierEntry extends BasicWatcherNode {
 
     private final int size;
     private final String root;
-    private static final Integer mutex = -1;
+
 
     ZKBarrierEntry(String hostPort, String root, int size) {
         super(hostPort);
@@ -70,10 +70,6 @@ public class ZKBarrierEntry extends BasicWatcherNode {
 
     @Override
     protected void doProcess(WatchedEvent event) {
-        if (event.getType() == Event.EventType.NodeChildrenChanged) {
-            synchronized (mutex) {
-                mutex.notify();
-            }
-        }
+
     }
 }

@@ -12,6 +12,7 @@ import java.util.Random;
 public abstract class BasicWatcherNode implements Watcher {
 
     protected static Logger LOG = LoggerFactory.getLogger(BasicWatcherNode.class);
+    protected static final Integer mutex = -1;
 
     private Random random = new Random(this.hashCode());
     protected String nodeId;
@@ -46,6 +47,10 @@ public abstract class BasicWatcherNode implements Watcher {
     @Override
     public void process(WatchedEvent event) {
         LOG.info("Processing event: " + event.toString());
+
+        synchronized (mutex) {
+            mutex.notify();
+        }
 
         doProcess(event);
 
