@@ -4,7 +4,9 @@
 
 Bottle is a **Zookeeper** lib for Java language.
 
-Note: to run the unit test in the project, you should have a zookeeper instance running in your local, which can be accessed with '127.0.0.1:2181'.
+
+
+**Note**: to run the unit test in the project, you should have a zookeeper instance running in your local, which can be accessed with '127.0.0.1:2181'.
 
 ## API
 
@@ -17,14 +19,14 @@ like [CyclicBarrier](https://docs.oracle.com/javase/7/docs/api/java/util/concurr
   * `enter()` : enter the group waiting.
   * `leave()` : leave the group waiting.  Entries can resume  execution only after all entries have leaved.
 
-You can find a usage in [here]().
+You can find a usage in [here](https://github.com/robynhan/Bottle/blob/master/src/test/java/org/robyn/lib/zookeeper/coredomain/ZKBarrierEntryTest.java).
 
 ## Developer Guide
 
 * Clone codebase
 
 ```shell
-git clone git@git.nanchao.org:groot/'Bottle'.git
+git clone https://github.com/robynhan/Bottle.git
 ```
 
 * Generate your IDEA project files, and then start your work
