@@ -65,7 +65,6 @@ public class QueueTest {
         executor.submit(new Producer(q, 4));
         executor.submit(new Producer(q, 5));
 
-
         executor.submit(new Consumer(q, 2));
         executor.submit(new Consumer(q, 3));
         executor.submit(new Consumer(q, 4));

@@ -21,6 +21,20 @@ like [CyclicBarrier](https://docs.oracle.com/javase/7/docs/api/java/util/concurr
 
 You can find a usage in [here](https://github.com/robynhan/Bottle/blob/master/src/test/java/org/robyn/lib/zookeeper/coredomain/ZKBarrierEntryTest.java).
 
+### 2. Queue
+
+Queue holds a theme, and producer can produce items to the theme, and the consumers can retrieve items from the theme.
+
+* `Queue` : a queue with a theme .
+  * `produce(int value)` :   put a item to the queue.
+  * `int consume()` : retrieve the frist item in the queue. 
+
+For a production-grade queue, you will need add count limit.
+
+You can find a usage in [here](https://github.com/robynhan/Bottle/blob/master/src/test/java/org/robyn/lib/zookeeper/coredomain/QueueTest.java).
+
+
+
 ## Developer Guide
 
 * Clone codebase
